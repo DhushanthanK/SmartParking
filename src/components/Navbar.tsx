@@ -1,6 +1,6 @@
 // Navbar.tsx
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   return (
@@ -30,6 +30,11 @@ const Navbar: React.FC = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/booking">
                 Booking
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/form">
+                Login
               </Link>
             </li>
           </ul>

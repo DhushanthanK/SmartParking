@@ -11,15 +11,14 @@ function Dashboard() {
         <br />
         <br />
         <h1>Parking Slots</h1>
-        <br />
-        <div className="container">
+        <div className="container p-5 my-5">
           <div className="row">
             {slots.map((parking, index) => {
               const [slot, isOccupied] = Object.entries(parking)[0];
               return (
                 <div
                   key={index}
-                  className="col-4 mb-3 box"
+                  className="col-md-4 mb-3 box" // Use col-md-4 to maintain width
                   style={{
                     borderRight: "10px solid black",
                     borderBlockEnd: "10px solid black",
@@ -27,23 +26,24 @@ function Dashboard() {
                     overflow: "hidden",
                   }}
                 >
-                  {slot}{" "}
-                  {isOccupied ? (
-                    <div className="text-bg-danger text- mb imgBox">
-                      <img
-                        src="src/Images/car-icon-top-view-4.jpg.png"
-
-                        alt="hello"
-                        height="auto"
-                        width="60%"
-                        id="image-section"
-                      />
-                    </div>
-                  ) : (
-                    <div className="p-5 fs-5 text-bg-success text ">
-                      <strong>Available</strong>
-                    </div>
-                  )}
+                  <div className="imgBox">
+                    {slot}
+                    {isOccupied ? (
+                      <div className="text-bg-danger text- mb">
+                        <img
+                          src="src/Images/car-icon-top-view-4.jpg.png"
+                          alt="hello"
+                          height="auto"
+                          width="100%"
+                          id="image-section"
+                        />
+                      </div>
+                    ) : (
+                      <div className="p-5 fs-5 text-bg-success text">
+                        <strong>Available</strong>
+                      </div>
+                    )}
+                  </div>
                 </div>
               );
             })}

@@ -1,3 +1,5 @@
+/* Dashboard.css */
+
 @media screen and (max-width: 320px) {
     #image-section {
       width: 100%;
@@ -5,7 +7,7 @@
     }
   
     .imgBox {
-      max-width: 400px;
+      max-width: 450px;
       min-width: 200px;
     }
   }

@@ -10,7 +10,7 @@ function Dashboard() {
       <div className="App text-center">
         <br />
         <br />
-        <h1>Parking Slots</h1>
+        <h1 style={{ color: 'white' }}>Parking Slots</h1>
         <div className="container p-5 my-5">
           <div className="row">
             {slots.map((parking, index) => {
@@ -27,7 +27,8 @@ function Dashboard() {
                   }}
                 >
                   <div className="imgBox">
-                    {slot}
+                    {/* Apply text-white class to set text color to white */}
+                    <div className="text-white">{slot}</div>
                     {isOccupied ? (
                       <div className="text-bg-danger text- mb">
                         <img

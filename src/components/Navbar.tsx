@@ -27,11 +27,11 @@ const Navbar: React.FC = () => {
                 Dashboard
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link className="nav-link" to="/booking">
                 Booking
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link className="nav-link" to="/form">
                 Login

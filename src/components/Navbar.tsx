@@ -4,43 +4,58 @@ import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="navbar" style={{ backgroundColor: "#e3f2fd" }}>
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-          Pages
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarText">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link className="nav-link" to="/dashboard">
-                Dashboard
-              </Link>
-            </li>
-            {/* <li className="nav-item">
-              <Link className="nav-link" to="/booking">
-                Booking
-              </Link>
-            </li> */}
-            <li className="nav-item">
-              <Link className="nav-link" to="/form">
-                Login
-              </Link>
-            </li>
-          </ul>
-        </div>
+    <nav className="navbar navbar-expand-lg bg-body-tertiary vw-100" style={{ backgroundColor: "#e3f2fd" }}>
+  <div className="container-fluid">
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse justify-content-around" id="navbarNavAltMarkup">
+      <div className="navbar-nav">
+        {/* <a className="nav-link" aria-current="page" href="/">Home</a> */}
+        <a className="nav-link" href="/dashboard">Dashboard</a>
+        <a className="nav-link" href="/booking">Booking</a>
+        <a className="nav-link" href="/form">Log In</a>
       </div>
-    </nav>
+    </div>
+  </div>
+</nav>
+    // <nav className="navbar vw-100 top-0" style={{ backgroundColor: "#e3f2fd" }}>
+    //   <div className="container-fluid">
+    //     <Link className="navbar-brand" to="/">
+    //       Pages
+    //     </Link>
+    //     <button
+    //       className="navbar-toggler"
+    //       type="button"
+    //       data-bs-toggle="collapse"
+    //       data-bs-target="#navbarText"
+    //       aria-controls="navbarText"
+    //       aria-expanded="false"
+    //       aria-label="Toggle navigation"
+    //     >
+    //       <span className="navbar-toggler-icon"></span>
+    //     </button>
+    //     <div className="collapse navbar-collapse" id="navbarText">
+    //       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+    //         <li className="nav-item">
+    //           <Link className="nav-link" to="/dashboard">
+    //             Dashboard
+    //           </Link>
+    //         </li>
+    //         {/* <li className="nav-item">
+    //           <Link className="nav-link" to="/booking">
+    //             Booking
+    //           </Link>
+    //         </li> */}
+    //         <li className="nav-item">
+    //           <Link className="nav-link" to="/form">
+    //             Login
+    //           </Link>
+    //         </li>
+    //       </ul>
+    //     </div>
+    //   </div>
+    // </nav>
   );
 };
 

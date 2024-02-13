@@ -10,7 +10,7 @@ const Form: React.FC = () => {
   return (
     <div>
       <Navbar />
-      <div className="container">
+      <div className="container bg-transparent">
         <div className="header">
           <div className="text">{action}</div>
           <div className="underline"></div>

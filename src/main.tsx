@@ -5,10 +5,13 @@ import "bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <div className="main">
+    <React.StrictMode>
     <Router>
       <App />
     </Router>
-  </React.StrictMode>,
+  </React.StrictMode>
+  </div>
+  ,
   document.getElementById('root')
 );

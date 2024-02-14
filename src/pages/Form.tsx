@@ -8,7 +8,7 @@ const Form: React.FC = () => {
   const [action, setAction] = useState("Sign Up");
 
   return (
-    <div>
+    <div> 
       <Navbar />
       <div className="container bg-transparent">
         <div className="header">

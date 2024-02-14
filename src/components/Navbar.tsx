@@ -10,11 +10,10 @@ const Navbar: React.FC = () => {
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse justify-content-around" id="navbarNavAltMarkup">
-      <div className="navbar-nav">
-        {/* <a className="nav-link" aria-current="page" href="/">Home</a> */}
-        <a className="nav-link" href="/dashboard">Dashboard</a>
-        <a className="nav-link" href="/booking">Booking</a>
-        <a className="nav-link" href="/form">Log In</a>
+      <div className="navbar-nav"  >  
+        <a className="nav-link" href="/dashboard" style={{ marginLeft:100 }}>Dashboard</a>
+        <a className="nav-link" href="/booking" style={{ marginLeft:100 }}>Booking</a>
+        <a className="nav-link" href="/form" style={{ marginLeft:100 }}>Log In</a>
       </div>
     </div>
   </div>

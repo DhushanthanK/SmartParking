@@ -9,11 +9,11 @@ const Navbar: React.FC = () => {
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
-    <div className="collapse navbar-collapse justify-content-around" id="navbarNavAltMarkup">
-      <div className="navbar-nav"  >  
-        <a className="nav-link" href="/dashboard" style={{ marginLeft:100 }}>Dashboard</a>
-        <a className="nav-link disabled" href="/booking" style={{ marginLeft:100 }}>Booking</a>
-        <a className="nav-link" href="/form" style={{ marginLeft:100 }}>Log In</a>
+    <div className="collapse navbar-collapse  justify-content-center" id="navbarNavAltMarkup">
+      <div className="navbar-nav col-9"  >  
+        <a className="nav-link col-3" href="/dashboard" style={{ marginLeft:100 }}>Dashboard</a>
+        <a className="nav-link disabled col-3" href="/booking" style={{ marginLeft:100 }}>Booking</a>
+        <a className="nav-link col-3" href="/form" style={{ marginLeft:100 }}>Log In</a>
       </div>
     </div>
   </div>

@@ -8,83 +8,82 @@ const Form: React.FC = () => {
   return (
     <div>
       <Navbar />
-      <div className="submit-container-select">
+      <div className="container bg-transparent align-content-center mt-1">
+      <div className="submit-container-select col-12 ">
         <div
-          className={action === "Login" ? "submit gray" : "submit"}
+          className={action === "Login" ? "col-lg-3 col-6 btn btn-success" : "col-lg-3 col-6 btn btn-light"}
           onClick={() => {
             setAction("Login");
           }}
         >
-          Log in
+          <div>Log In</div>
         </div>
         <div
-          className={action === "Sign Up" ? "submit gray" : "submit"}
+          className={action === "Sign Up" ? "col-lg-3 col-6  btn btn-success" : "col-lg-3 col-6 btn btn-light"}
           onClick={() => {
             setAction("Sign Up");
           }}
         >
-          Create Account
+          <div>Sign Up</div>
         </div>
       </div>
-      <div className="container bg-transparent">
+      <div className="bg-transparent">
         <div className="header">
-          <div className="text">{action}</div>
-          <div className="underline"></div>
-          <div className="inputs">
-            {action === "Login" ? null : (
-              <div className="input">
-                <img src="src/assets/person.png" alt="" />
-                <input type="text" placeholder="Name" />
+          <div className="text text-center">{action}</div>
+          <div className="underline col-2"></div>
+          
+
+          {/* Sajeethan defined start node of Login Form */}
+          {action === "Login" ? null : (
+              <div className="col-6">
+              <div className="form1 d-flex flex-column text-center">
+                <form action="" method="post">
+                  <div className="form-floating col-12 mb-3">
+                    <input type="text" name="uName" className="form-control" id="floatingInput" placeholder=""/>
+                    <label htmlFor="floatingInput">Username</label>       
+                  </div>
+                  <div className="form-floating col-12 mb-3">
+                    <input type="text" name="fName" className="form-control" id="floatingInput" placeholder=""/>
+                    <label htmlFor="floatingInput">Full Name</label>       
+                  </div>
+                  <div className="form-floating col-12 mb-3">
+                    <input type="password" name="pw" className="form-control" id="floatingInput" placeholder=""/>
+                    <label htmlFor="floatingInput">Password</label>       
+                  </div>
+                  <div className="form-floating col-12 mb-3">
+                    <input type="password" name="cpw" className="form-control" id="floatingInput" placeholder=""/>
+                    <label htmlFor="floatingInput">Confirm Password</label>       
+                  </div>
+                  <button className="btn btn-warning col-5" type="submit">Submit</button>
+                </form>
               </div>
-            )}
-
-            <div className="input">
-              <img src="src/assets/email.png" alt="" />
-              <input type="text" placeholder="E-mail" />
             </div>
-
-            <div className="input">
-              <img src="src/assets/password.png" alt="" />
-              <input type="text" placeholder="Enter a Password" />
-            </div>
-
-            {action === "Login" ? null : (
-              <div className="input">
-                <img src="src/assets/person.png" alt="" />
-                <input type="text" placeholder="Confirm Password" />
-              </div>
             )}
-          </div>
+          
+          {/* Sajeethan defined start node of SignUp Form */}
           {action === "Sign Up" ? null : (
-            <div>
-              <div className="forgot-password">
-                Forgot Password? <span>Click Here</span>
+            <div className="col-6">
+              <div className="form1 d-flex flex-column text-center">
+                <form action="" method="post">
+                  <div className="form-floating col-12 mb-3">
+                    <input type="text" name="uName" className="form-control" id="floatingInput" placeholder=""/>
+                    <label htmlFor="floatingInput">Username</label>       
+                  </div>
+                  <div className="form-floating col-12 mb-3">
+                    <input type="password" name="pw" className="form-control" id="floatingInput" placeholder=""/>
+                    <label htmlFor="floatingInput">Password</label>       
+                  </div>
+                  <button className="btn btn-warning col-5" type="submit">Submit</button>
+                </form>
               </div>
             </div>
           )}
-          {action === "Sign Up" ? (
-            <div
-              className="Button"
-              onClick={() => {
-                //setAction("Login");
-              }}
-            >
-              Create Account
-            </div>
-          ) : (
-            <div>
-              <div
-                className="Button"
-                onClick={() => {
-                  //setAction("Login");
-                }}
-              >
-                Log in
-              </div>
-            </div>
-          )}
+          {/*  */}
+       
         </div>
       </div>
+      </div>
+      
     </div>
   );
 };

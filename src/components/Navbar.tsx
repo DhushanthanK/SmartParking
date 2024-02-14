@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
     <div className="collapse navbar-collapse justify-content-around" id="navbarNavAltMarkup">
       <div className="navbar-nav"  >  
         <a className="nav-link" href="/dashboard" style={{ marginLeft:100 }}>Dashboard</a>
-        <a className="nav-link" href="/booking" style={{ marginLeft:100 }}>Booking</a>
+        <a className="nav-link disabled" href="/booking" style={{ marginLeft:100 }}>Booking</a>
         <a className="nav-link" href="/form" style={{ marginLeft:100 }}>Log In</a>
       </div>
     </div>

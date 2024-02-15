@@ -18,6 +18,20 @@ const Form: React.FC = () => {
       .then(result => console.log(result))
       .catch(err => console.log(err))
       navigate('/form')
+    
+    }
+    const HandleLogin = (e: { preventDefault: () => void; }) =>{
+      // console.log(username,password)
+      axios.post('http://localhost:3001/login',{username,password})
+      .then(result => {
+        console.log(result.data)
+        if (result.data === "a"){
+          navigate('/dashboard')
+        } else {
+          console.log("Login Failed")
+        }
+      } )
+      .catch(err => console.log(err))
     // Backend dev by Sajeethan ends here
     }
   return (
@@ -85,13 +99,16 @@ const Form: React.FC = () => {
           {action === "Sign Up" ? null : (
             <div className="col-lg-6 col-10">
               <div className="form1 d-flex flex-column text-center">
-                <form action="" method="post">
+                <form onSubmit={HandleLogin}>
                   <div className="form-floating col-12 mb-3">
-                    <input type="text" name="u2Name" className="form-control" id="floatingInput5" placeholder=""/>
+                    <input type="text" name="u2Name" className="form-control" id="floatingInput5" placeholder=""
+                    onChange={(e)=>setUsername(e.target.value)}
+                    />
                     <label htmlFor="floatingInput">Username</label>       
                   </div>
                   <div className="form-floating col-12 mb-3">
-                    <input type="password" name="pw2  " className="form-control" id="floatingInput6" placeholder=""/>
+                    <input type="password" name="pw2  " className="form-control" id="floatingInput6" placeholder=""
+                    onChange={(e)=>setPassword(e.target.value)}/>
                     <label htmlFor="floatingInput">Password</label>       
                   </div>
                   <button className="sub btn btn-primary col-5" type="submit">Submit</button>

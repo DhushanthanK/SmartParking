@@ -16,6 +16,26 @@ app.post('/Users',(req,res)=>{
     .catch(err => res.json(err))
 })
 
+app.post('/login',(req,res)=>{
+    const {username,password} = req.body;
+    UserModel.findOne({username:username})
+    .then(user =>{
+        if(user){
+            if(user.password === password){
+                res.json("a")
+                console.log(user.name)
+            } else {
+                res.json("WrongPassword")
+                console.log("Please check your Password")
+            }
+        } else {
+            res.json("NoUser.")
+            console.log("No user exist please register first.")
+        }
+        
+    })
+})
+
 app.listen(3001,()=>{
     console.log("MongoDB Connected by Sajeethan!!!")
 })

@@ -50,7 +50,7 @@ body {
     justify-content: center; /* Horizontally center */
     align-items: center; /* Vertically center */
     min-height: 100vh;
-    background: linear-gradient(#000000, #230436,rgb(49, 0, 80));
+    background: linear-gradient(rgb(49, 0, 80), #230436,#000000);
 }
 
 

@@ -5,7 +5,7 @@ import  "./navbar.css"
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-dark vw-100">
+    <nav className="navbar navbar-expand-lg vw-100">
   <div className="container-fluid">
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>

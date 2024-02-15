@@ -6,13 +6,13 @@ import { BrowserRouter as Router } from "react-router-dom";
 import * as Popper from "@popperjs/core"
 
 ReactDOM.render(
-  <div className="main">
-    <React.StrictMode>
+
+  <React.StrictMode>
     <Router>
       <App />
     </Router>
   </React.StrictMode>
-  </div>
+
   
   ,
   document.getElementById('root')

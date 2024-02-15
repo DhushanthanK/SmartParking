@@ -1,20 +1,16 @@
 
 
-@media (min-width: 0px) {
-    
+   
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    overflow-y: auto; /* Enable vertical scrolling */
+    /* overflow-y: auto;  */
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
     margin: auto;
     background: #ffff;
-    padding-bottom: 5vw; /* Using vw for padding */
 }
 
 .card{
@@ -34,13 +30,12 @@
     align-items: center;
     gap: 1.5vw; /* Using vw for gap */
     width: 100%;
-    margin-top: 0.5vw; /* Using vw for margin */
 }
 
 .text{
     color: #ffffff;
-    font-size: 4.8vw; /* Using vw for font-size */
     font-weight: 700;
+    font-size:xx-large;
 }
 
 .underline{
@@ -55,9 +50,10 @@ body {
     justify-content: center; /* Horizontally center */
     align-items: center; /* Vertically center */
     min-height: 100vh;
-    background: linear-gradient(#2A00B7, #42006C);
+    background: linear-gradient(#000000, #230436,rgb(49, 0, 80));
 }
 
+<<<<<<< HEAD
 .inputs{
     margin-top: 5vw; /* Using vw for margin */
     display: flex;
@@ -73,18 +69,11 @@ body {
     background: #eaeaea;
     border-radius: 50px; /* Using vw for border-radius */
 }
+=======
+>>>>>>> origin/sajeethan
 
 .input img{
     margin: 0 3vw; /* Using vw for margin */
-}
-.input input{
-    height: 4vw; /* Using vw for height */
-    width: 66.67vw; /* Using vw for width */
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #797979;
-    font-size: 1.9vw; /* Using vw for font-size */
 }
 
 .forgot-password{
@@ -112,8 +101,8 @@ body {
 
 .submit-container-select{
     display: flex;
-    gap: 6vw; /* Using vw for gap */
-    margin: 5vw auto; /* Using vw for margin */
+    gap: 1vw; /* Using vw for gap */
+    margin: 5vw auto 2vw auto; /* Using vw for margin */
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -121,19 +110,22 @@ body {
 
 .submit{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 22vw; /* Using vw for width */
-    height: 6vw; /* Using vw for height */
-    margin-top: 1vw; /* Using vw for margin */
     color: #fff;
+<<<<<<< HEAD
     background: #ad0de3;
     border-radius: 5vw; /* Using vw for border-radius */
     font-size: 1.9vw; /* Using vw for font-size */
     font-weight: 700;
+=======
+    background: #1a7dab;
+    border-radius: 20px; 
+>>>>>>> origin/sajeethan
     cursor: pointer;
+    padding: 0 10px;
+    font-size: xx-large;
 }
 
+<<<<<<< HEAD
 .Button{
     display: flex;
     margin-top: 1vw; /* Using vw for margin */
@@ -148,6 +140,8 @@ body {
     font-weight: 700;
     cursor: pointer;
 }
+=======
+>>>>>>> origin/sajeethan
 
 .gray{
     background: #EAEAEA;
@@ -155,8 +149,8 @@ body {
 }
 
 
-  }
 
+<<<<<<< HEAD
 
   @media (min-width: 600px) {
     
@@ -314,3 +308,5 @@ body {
     
       }
     
+=======
+>>>>>>> origin/sajeethan

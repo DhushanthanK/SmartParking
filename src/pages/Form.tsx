@@ -45,7 +45,7 @@ const Form: React.FC = () => {
 
             <div className="input">
               <img src="src/assets/password.png" alt="" />
-              <input type="text" placeholder="Enter a Password" />
+              <input type="password" placeholder="Enter a Password" />
             </div>
 
             {action === "Login" ? null : (

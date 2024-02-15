@@ -53,24 +53,6 @@ body {
     background: linear-gradient(#000000, #230436,rgb(49, 0, 80));
 }
 
-<<<<<<< HEAD
-.inputs{
-    margin-top: 5vw; /* Using vw for margin */
-    display: flex;
-    flex-direction: column;
-    gap: 2.5vw; /* Using vw for gap */
-}
-
-.input{
-    display: flex;
-    align-items: center;
-    margin: auto;
-    height: 12vw; /* Using vw for height */
-    background: #eaeaea;
-    border-radius: 50px; /* Using vw for border-radius */
-}
-=======
->>>>>>> origin/sajeethan
 
 .input img{
     margin: 0 3vw; /* Using vw for margin */
@@ -111,37 +93,13 @@ body {
 .submit{
     display: flex;
     color: #fff;
-<<<<<<< HEAD
-    background: #ad0de3;
-    border-radius: 5vw; /* Using vw for border-radius */
-    font-size: 1.9vw; /* Using vw for font-size */
-    font-weight: 700;
-=======
     background: #1a7dab;
     border-radius: 20px; 
->>>>>>> origin/sajeethan
     cursor: pointer;
     padding: 0 10px;
     font-size: xx-large;
 }
 
-<<<<<<< HEAD
-.Button{
-    display: flex;
-    margin-top: 1vw; /* Using vw for margin */
-    justify-content: center;
-    align-items: center;
-    width: 22vw; /* Using vw for width */
-    height: 6vw; /* Using vw for height */
-    color: #fff;
-    background: #0de3b4;;
-    border-radius: 5vw; /* Using vw for border-radius */
-    font-size: 1.9vw; /* Using vw for font-size */
-    font-weight: 700;
-    cursor: pointer;
-}
-=======
->>>>>>> origin/sajeethan
 
 .gray{
     background: #EAEAEA;
@@ -150,163 +108,3 @@ body {
 
 
 
-<<<<<<< HEAD
-
-  @media (min-width: 600px) {
-    
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-        overflow-y: auto; /* Enable vertical scrolling */
-    }
-    
-    .container {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        background: #ffff;
-        padding-bottom: 5vw; /* Using vw for padding */
-    }
-    
-    .card{
-        height: 80vw; /* Using vw for height */
-        width: 80vw; /* Using vw for width */
-        max-width: 720px; /* Limiting max-width */
-        background-color:#fff;
-        font-family: 'Rubik', sans-serif;
-        position:absolute;
-        transition:all 0.5s;
-        overflow:hidden; 
-    }
-    
-    .header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1vw; /* Using vw for gap */
-        width: 100%;
-    }
-    
-    .text{
-        color: #ffffff;
-        font-size:5vw; /* Using vw for font-size */
-        font-weight: 700;
-    }
-    
-    .underline{
-        width: 6vw; /* Using vw for width */
-        height: 0.6vw; /* Using vw for height */
-        background: #ffffff;
-        border-radius: 0.9vw; /* Using vw for border-radius */
-    }
-    
-    body {
-        margin: 0;
-        justify-content: center; /* Horizontally center */
-        align-items: center; /* Vertically center */
-        min-height: 100vh;
-        background: linear-gradient(#2A00B7, #42006C);
-    }
-    
-    .inputs{
-        margin-top: 3vw; /* Using vw for margin */
-        display: flex;
-        flex-direction: column;
-        gap: 1vw; /* Using vw for gap */
-    }
-    
-    .input{
-        display: flex;
-        align-items: center;
-        margin: auto;
-        height: 5vw; /* Using vw for height */
-        background: #eaeaea;
-        border-radius: 1.2vw; /* Using vw for border-radius */
-    }
-    
-    .input img{
-        margin: 0 3vw; /* Using vw for margin */
-    }
-    .input input{
-        height: 4vw; /* Using vw for height */
-        width: 66.67vw; /* Using vw for width */
-        background: transparent;
-        border: none;
-        outline: none;
-        color: #797979;
-        font-size: 2.5vw; /* Using vw for font-size */
-    }
-    
-    .forgot-password{
-        padding-left: 6.2vw; /* Using vw for padding */
-        margin-top: 1vw; /* Using vw for margin */
-        color: #797979;
-        font-size: 2.5vw; /* Using vw for font-size */
-    }
-    
-    .forgot-password span{
-        color: #ffffff;
-        cursor: pointer;
-    }
-    
-    .User{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        border-radius: 5vw; /* Using vw for border-radius */
-        font-size: 1vw; /* Using vw for font-size */
-        font-weight: 700;
-        cursor: pointer;
-    }
-    
-    .submit-container-select{
-        display: flex;
-        gap: 6vw; /* Using vw for gap */
-        margin: 4vw auto; /* Using vw for margin */
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-    }
-    
-    .submit{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 22vw; /* Using vw for width */
-        height: 5vw; /* Using vw for height */
-        margin-top: 0.5vw; /* Using vw for margin */
-        color: #fff;
-        background: #b11ab1db;
-        border-radius: 5vw; /* Using vw for border-radius */
-        font-size: 2.5vw; /* Using vw for font-size */
-        font-weight: 700;
-        cursor: pointer;
-    }
-    
-    .Button{
-        display: flex;
-        margin-top: 1vw; /* Using vw for margin */
-        justify-content: center;
-        align-items: center;
-        width: 22vw; /* Using vw for width */
-        height: 6vw; /* Using vw for height */
-        color: #ffffff;
-        background: #0de3b4;;
-        border-radius: 5vw; /* Using vw for border-radius */
-        font-size: 1.9vw; /* Using vw for font-size */
-        font-weight: 700;
-        cursor: pointer;
-    }
-    
-    .gray{
-        background: #EAEAEA;
-        color: #676767;
-    }
-    
-    
-      }
-    
-=======
->>>>>>> origin/sajeethan

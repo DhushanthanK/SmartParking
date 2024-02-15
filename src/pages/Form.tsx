@@ -15,15 +15,15 @@ const Form: React.FC = () => {
 
     const handleSubmit = (e: { preventDefault: () => void; }) =>{
       axios.post('http://localhost:3001/Users',{name,username,password})
-      .then(result => console.log(result))
-      .catch(err => console.log(err))
+      .then((result: any) => console.log(result))
+      .catch((err: any) => console.log(err))
       navigate('/form')
     
     }
     const HandleLogin = (e: { preventDefault: () => void; }) =>{
       // console.log(username,password)
       axios.post('http://localhost:3001/login',{username,password})
-      .then(result => {
+      .then((result: { data: string; }) => {
         console.log(result.data)
         if (result.data === "a"){
           navigate('/dashboard')
@@ -31,7 +31,7 @@ const Form: React.FC = () => {
           console.log("Login Failed")
         }
       } )
-      .catch(err => console.log(err))
+      .catch((err: any) => console.log(err))
     // Backend dev by Sajeethan ends here
     }
   return (

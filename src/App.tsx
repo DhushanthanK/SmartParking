@@ -12,6 +12,8 @@ import Reservation from "./pages/Reservation";
 import Reservation_Form from "./pages/Reservation_Form";
 
 function App() {
+  if(localStorage.getItem("name")==null){
+  localStorage.setItem("name","Log In")}
   return (
     <Routes>
       <Route path="/" element={<Dashboard />} />

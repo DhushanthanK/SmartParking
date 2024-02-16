@@ -33,7 +33,7 @@ const Booking_Slot: React.FC = () => {
       <div className="header1">
         <div className="text1">Reservation Form</div>
         <div className="underline1"></div>
-        <div className="inputs1 col-12">
+        <div className="inputs1 col-12 d-flex">
           <div className="input1 col-lg-6 col-8">
             <label htmlFor="vehicleNumber">Vehicle Number:</label>
             <input

@@ -22,20 +22,20 @@ app.post('/login',(req,res)=>{
     .then(user =>{
         if(user){
             if(user.password === password){
-                res.json("a")
+                res.json({message:'Success',name:user.name})
                 console.log(user.name)
             } else {
-                res.json("WrongPassword")
+                res.json({message:'WrongPassword'})
                 console.log("Please check your Password")
             }
         } else {
-            res.json("NoUser.")
+            res.json("NoUser")
             console.log("No user exist please register first.")
         }
         
     })
 })
 
-app.listen(3001,()=>{
+app.listen(5174,()=>{
     console.log("MongoDB Connected by Sajeethan!!!")
 })

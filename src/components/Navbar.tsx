@@ -1,9 +1,11 @@
 // Navbar.tsx
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import  "./navbar.css"
 
 const Navbar: React.FC = () => {
+  var [name] = useState(localStorage.getItem("name"));
+  
   return (
     <nav className="navbar navbar-expand-lg vw-100">
   <div className="container-fluid">
@@ -14,7 +16,7 @@ const Navbar: React.FC = () => {
       <div className="navbar-nav col-9"  >  
         <a className="nav-link col-3 text-white" href="/dashboard" style={{ marginLeft:100 }}>Dashboard</a>
         <a className="nav-link disabled col-3 text-grey" href="/booking" style={{ marginLeft:100 }}>Booking</a>
-        <a className="nav-link col-3 text-white" href="/form" style={{ marginLeft:100 }}>Log In</a>
+        <a className="nav-link col-3 text-white" href="/form" style={{ marginLeft:100 }}>{name}</a>
       </div>
     </div>
   </div>

@@ -11,8 +11,10 @@ const Form: React.FC = () => {
     const [name, setName] = useState<string | undefined>(undefined); 
     const [username, setUsername] = useState<string | undefined>(undefined);
     const [password, setPassword] = useState<string | undefined>(undefined);
+    const [conPassword, setConPassword] = useState<string | undefined>(undefined);
     const navigate = useNavigate()
     const [passwordInputClass, setPasswordInputClass] = useState("");
+    const [nameInputClass, setnameInputClass] = useState("");
     const [PasswordAlertClass,setPasswordAlertClass] = useState(true)
 
     const handleSubmit = (e: { preventDefault: () => void; }) =>{
@@ -29,12 +31,14 @@ const Form: React.FC = () => {
         console.log(result.data)
         if (result.data.message === 'Success'){
           navigate('/dashboard')
+          localStorage.setItem("name",result.data.name)
         } else if (result.data.message === 'WrongPassword'){
           setPasswordInputClass(" is-invalid");
           setPasswordAlertClass(false);
         } else if (result.data.message === 'NoUser'){
+          setnameInputClass(" is-invalid");
           setPasswordInputClass(" is-invalid");
-          setPasswordAlertClass(false);
+          alert("Invalid Login")
         }
       } )
       .catch(err => console.log(err))
@@ -87,12 +91,14 @@ const Form: React.FC = () => {
                     <label htmlFor="floatingInput">Full Name</label>       
                   </div>
                   <div className="form-floating col-12 mb-3">
-                    <input type="password" name="pw" className="form-control" id="floatingInput3" placeholder=""/>
+                    <input type="password" name="pw" className="form-control" id="floatingInput3" placeholder=""
+                    onChange={(e)=>setPassword(e.target.value)}
+                    />
                     <label htmlFor="floatingInput">Password</label>       
                   </div>
                   <div className="form-floating col-12 mb-3">
                     <input type="password" name="cpw" className="form-control" id="floatingInput4" placeholder=""
-                    onChange={(e)=>setPassword(e.target.value)}
+                    onChange={(e)=>setConPassword(e.target.value)}
                     />
                     <label htmlFor="floatingInput">Confirm Password</label>       
                   </div>
@@ -105,9 +111,9 @@ const Form: React.FC = () => {
           {/* Sajeethan defined start node of SignUp Form */}
           {action === "Sign Up" ? null : (
             <div className="col-lg-6 col-10">
-              <div className="form1 d-flex flex-column text-center">
+              <div className="form1 d-flex flex-column text-center justify-content-center">
                   <div className="form-floating col-12 mb-3">
-                    <input type="text" name="u2Name" className="form-control" id="floatingInput5" placeholder=""
+                    <input type="text" name="u2Name" className={`form-control ${nameInputClass}`} id="floatingInput5" placeholder=""
                     onChange={(e)=>setUsername(e.target.value)}
                     />
                     <label htmlFor="floatingInput">Username</label>       
@@ -118,10 +124,10 @@ const Form: React.FC = () => {
                     <div className={PasswordAlertClass ? "alert alert-danger d-none":"alert alert-danger"}>Incorrect Password</div>
                     <label htmlFor="floatingInput">Password</label>       
                   </div>
-                  <button className="btn btn-primary col-5" onClick={HandleLogin}>Submit</button>
+                  <button className="btn btn-primary col-12" onClick={HandleLogin}>Submit</button>
               </div>
             </div>
-          )}
+          )}  
           {/*  */}
        
         </div>

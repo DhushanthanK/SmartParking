@@ -8,6 +8,8 @@ import "./App.css";
 
 
 function App() {
+  if(localStorage.getItem("name")==null){
+  localStorage.setItem("name","Log In")}
   return (
 
       <Routes>

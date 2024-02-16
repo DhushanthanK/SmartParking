@@ -29,7 +29,7 @@ app.post('/login',(req,res)=>{
                 console.log("Please check your Password")
             }
         } else {
-            res.json("NoUser")
+            res.json({message:"NoUser"})
             console.log("No user exist please register first.")
         }
         

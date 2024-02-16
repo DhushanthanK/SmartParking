@@ -30,29 +30,32 @@ const Booking_Slot: React.FC = () => {
   return (
     <div>
       <Navbar />
-      <div className="header">
-        <div className="text">Reservation Form</div>
-        <div className="underline"></div>
-        <div className="inputs">
-          <div className="input">
-            <img src="src/assets/vehicle.png" alt="" />
+      <div className="header1">
+        <div className="text1">Reservation Form</div>
+        <div className="underline1"></div>
+        <div className="inputs1">
+          <div className="input1">
+            <label htmlFor="vehicleNumber">Vehicle Number:</label>
             <input
-              type="text"
+              id="vehicleNumber"
+              type="text1"
               placeholder="Vehicle Number"
               value={vehicleNumber}
               onChange={(e) => setVehicleNumber(e.target.value)}
             />
           </div>
-          <div className="">
-            <img src="src/assets/clock.png" alt="" />
+          <div className="input1">
+            <label htmlFor="bookingTime">Booking Time:</label>
             <input
+              id="bookingTime"
               type="time"
               placeholder="Booking Time"
               value={bookingTime}
               onChange={handleTimeChange}
             />
           </div>
-          <div className="">
+          <div className="input1">
+            <label htmlFor="duration">Duration:</label>
             <div className="toggle-button">
               <button className="duration-btn" onClick={handleToggle}>
                 {duration || "Select Duration"}

@@ -9,7 +9,7 @@ const Reserve_Button: React.FC = () => {
   return (
     <div className="submit-container">
       <button className="submit btnclass" onClick={handleButtonClick}>
-        Book your slot
+        Next
       </button>
     </div>
   );

@@ -2,9 +2,9 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import slots from "../Parking_slots.json";
-import "./Dashboard.css";
-import Button_Reserve from "./Button_Select_Slot";
+import "./Reservation.css";
 import Reserve from "./Reserve_Button";
+import Button_Booking from "./Button_Select_Slot";
 
 function Booking() {
   const [buttonStates, setButtonStates] = useState(
@@ -70,7 +70,7 @@ function Booking() {
                           />
                         </div>
                       ) : (
-                        <Button_Reserve
+                        <Button_Booking
                           initialColor="green"
                           handleColorChange={() => handleColorChange(index)}
                           isActive={buttonStates[index]}

@@ -3,18 +3,9 @@ import { useState } from "react";
 import Navbar from "../components/Navbar";
 import slots from "../Parking_slots.json";
 import "./Dashboard.css";
-import Button_Booking from "./Button_Select_Slot";
 
 function Dashboard() {
-  const [buttonStates, setButtonStates] = useState(
-    Array(slots.length).fill(false)
-  ); // Initialize button states
-
-  const handleColorChange = (index: number) => {
-    const newButtonStates = buttonStates.map((_, i) => i === index);
-    setButtonStates(newButtonStates);
-  };
-
+  const [] = useState(Array(slots.length).fill(false)); // Initialize button states
   return (
     <div>
       <Navbar />
@@ -69,11 +60,7 @@ function Dashboard() {
                           />
                         </div>
                       ) : (
-                        <Button_Booking
-                          initialColor="green"
-                          handleColorChange={() => handleColorChange(index)}
-                          isActive={buttonStates[index]}
-                        />
+                        <div className="available-box">Available</div>
                       )}
                     </div>
                   );

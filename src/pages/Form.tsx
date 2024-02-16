@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const Form: React.FC = () => {
   const [action, setAction] = useState("Login");
+  
 
   // Backend dev by Sajeethan Starts here
     const [name, setName] = useState<string | undefined>(undefined); 

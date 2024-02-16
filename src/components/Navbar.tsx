@@ -1,10 +1,17 @@
 // Navbar.tsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 
 const Navbar: React.FC = () => {
-  var [name] = useState(localStorage.getItem("name"));
+  const [name, setName] = useState<string | null>(localStorage.getItem("name"));
+
+  useEffect(() => {
+    const storedName = localStorage.getItem("name");
+    if (storedName !== name) {
+      setName(storedName);
+    }
+  }, [name]);
 
   return (
     <nav className="navbar navbar-expand-lg vw-100">
@@ -50,43 +57,6 @@ const Navbar: React.FC = () => {
         </div>
       </div>
     </nav>
-    // <nav className="navbar vw-100 top-0" style={{ backgroundColor: "#e3f2fd" }}>
-    //   <div className="container-fluid">
-    //     <Link className="navbar-brand" to="/">
-    //       Pages
-    //     </Link>
-    //     <button
-    //       className="navbar-toggler"
-    //       type="button"
-    //       data-bs-toggle="collapse"
-    //       data-bs-target="#navbarText"
-    //       aria-controls="navbarText"
-    //       aria-expanded="false"
-    //       aria-label="Toggle navigation"
-    //     >
-    //       <span className="navbar-toggler-icon"></span>
-    //     </button>
-    //     <div className="collapse navbar-collapse" id="navbarText">
-    //       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-    //         <li className="nav-item">
-    //           <Link className="nav-link" to="/dashboard">
-    //             Dashboard
-    //           </Link>
-    //         </li>
-    //         {/* <li className="nav-item">
-    //           <Link className="nav-link" to="/booking">
-    //             Booking
-    //           </Link>
-    //         </li> */}
-    //         <li className="nav-item">
-    //           <Link className="nav-link" to="/form">
-    //             Login
-    //           </Link>
-    //         </li>
-    //       </ul>
-    //     </div>
-    //   </div>
-    // </nav>
   );
 };
 

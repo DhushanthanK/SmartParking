@@ -81,7 +81,6 @@ function Booking() {
                 })}
               </div>
             </div>
-            <br></br>
             <div>
               <Reserve />
             </div>

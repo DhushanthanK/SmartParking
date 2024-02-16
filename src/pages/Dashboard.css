@@ -1,5 +1,8 @@
 /* Dashboard.css */
 
+.Navbar{
+  position: absolute;
+}
 /* Custom CSS for different screen sizes */
 @media (max-width: 280px) {
   /* Small devices (576px and below) */

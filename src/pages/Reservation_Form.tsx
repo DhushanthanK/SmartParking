@@ -33,8 +33,8 @@ const Booking_Slot: React.FC = () => {
       <div className="header1">
         <div className="text1">Reservation Form</div>
         <div className="underline1"></div>
-        <div className="inputs1">
-          <div className="input1">
+        <div className="inputs1 col-12">
+          <div className="input1 col-lg-6 col-8">
             <label htmlFor="vehicleNumber">Vehicle Number:</label>
             <input
               id="vehicleNumber"
@@ -44,7 +44,7 @@ const Booking_Slot: React.FC = () => {
               onChange={(e) => setVehicleNumber(e.target.value)}
             />
           </div>
-          <div className="input1">
+          <div className="input1 col-lg-6 col-8">
             <label htmlFor="bookingTime">Booking Time:</label>
             <input
               id="bookingTime"
@@ -54,7 +54,7 @@ const Booking_Slot: React.FC = () => {
               onChange={handleTimeChange}
             />
           </div>
-          <div className="input1">
+          <div className="input1 col-lg-6 col-8">
             <label htmlFor="duration">Duration:</label>
             <div className="toggle-button">
               <button className="duration-btn" onClick={handleToggle}>

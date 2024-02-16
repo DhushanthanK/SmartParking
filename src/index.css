@@ -27,7 +27,6 @@ body {
   margin: 0;
   overflow-x: hidden;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
   background: linear-gradient(#dfdf26, #9ad007);   /* Add your desired background color here */

@@ -9,7 +9,7 @@ function Dashboard() {
   return (
     <div>
       <Navbar />
-      <div className="App text-center">
+      <div className="text-center">
         <br />
         <br />
         <h1 style={{ color: "white", fontWeight: "bold", fontSize: "3vw" }}>

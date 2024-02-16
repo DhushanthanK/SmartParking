@@ -7,7 +7,7 @@ const Reserve_Button: React.FC = () => {
   };
 
   return (
-    <div className="submit-container">
+    <div className="">
       <button className="submit btnclass" onClick={handleButtonClick}>
         Next
       </button>

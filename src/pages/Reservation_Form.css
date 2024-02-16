@@ -6,8 +6,11 @@
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     margin: auto;
     background: #ffff;
+    padding-bottom: 30px;
 }
 
 .card{
@@ -25,8 +28,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5vw; /* Using vw for gap */
+    gap: 9px;
     width: 100%;
+    margin-top: 30px;
 }
 
 .text{
@@ -42,10 +46,42 @@
     border-radius: 50px; /* Using vw for border-radius */
 }
 
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(#cd30ec, #a532ec,rgb(102, 1, 165));
+}
 
+.inputs{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 480px;
+    height: 80px;
+    background: #eaeaea;
+    border-radius: 6px;
+}
 
 .input img{
     margin: 0 3vw; /* Using vw for margin */
+}
+
+.input input{
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #797979;
+    font-size: 19px; 
 }
 
 .forgot-password{
@@ -71,26 +107,44 @@
     cursor: pointer;
 }
 
-.submit-container-select{
+.submit-container{
     display: flex;
     gap: 1vw; /* Using vw for gap */
     margin: 5vw auto 2vw auto; /* Using vw for margin */
     align-items: center;
     text-align: center;
     justify-content: center;
+    border-radius: 16px;
 }
+
 
 .submit{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
     color: #fff;
-    background: #1a7dab;
-    border-radius: 20px; 
+    background: #4c00b4;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
     cursor: pointer;
-    padding: 0 10px;
-    font-size: xx-large;
     
 }
-
+.background-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
+    color: #fff;
+    background: #4c00b4;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+}
 
 .gray{
     background: #EAEAEA;

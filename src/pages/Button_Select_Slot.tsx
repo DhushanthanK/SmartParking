@@ -1,5 +1,6 @@
 // Button_Booking.tsx
 import React, { useState } from "react";
+import "./Dashboard.css";
 
 interface ButtonBookingProps {
   initialColor: string;
@@ -24,7 +25,7 @@ const Button_Booking: React.FC<ButtonBookingProps> = ({
   return (
     <button
       type="button"
-      className="btn custom-btn btn-primary"
+      className="btn custom-btn btn-primary align-items-center justify-content-center"
       style={{ backgroundColor: isActive ? "red" : "green" }}
       onClick={handleButtonClick}
       id="btn-custom-btn"

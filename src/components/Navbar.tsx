@@ -12,9 +12,9 @@ const Navbar: React.FC = () => {
     </button>
     <div className="collapse navbar-collapse  justify-content-center" id="navbarNavAltMarkup">
       <div className="navbar-nav col-9"  >  
-        <a className="nav-link col-3 text-white" href="/dashboard" style={{ marginLeft:100 }}>Dashboard</a>
-        <a className="nav-link disabled col-3 text-grey" href="/booking" style={{ marginLeft:100 }}>Booking</a>
-        <a className="nav-link col-3 text-white" href="/form" style={{ marginLeft:100 }}>Log In</a>
+        <a className="nav-link col-3 text-black" href="/dashboard" style={{ marginLeft:100 }}>Dashboard</a>
+        <a className="nav-link col-3 text-black" href="/reservation" style={{ marginLeft:100 }}>Reservation</a>
+        <a className="nav-link col-3 text-black" href="/form" style={{ marginLeft:100 }}>Log In</a>
       </div>
     </div>
   </div>

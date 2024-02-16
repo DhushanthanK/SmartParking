@@ -3,9 +3,10 @@ import { useState } from "react";
 import Navbar from "../components/Navbar";
 import slots from "../Parking_slots.json";
 import "./Dashboard.css";
-import Button_Booking from "./Button_Select_Slot";
+import Button_Reserve from "./Button_Select_Slot";
+import Reserve from "./Reserve_Button";
 
-function Dashboard() {
+function Booking() {
   const [buttonStates, setButtonStates] = useState(
     Array(slots.length).fill(false)
   ); // Initialize button states
@@ -22,7 +23,7 @@ function Dashboard() {
         <br />
         <br />
         <h1 style={{ color: "white", fontWeight: "bold", fontSize: "3vw" }}>
-          Parking Slots
+          Select an available slot
         </h1>
         <div className="bg-transparent">
           <div className="header">
@@ -69,7 +70,7 @@ function Dashboard() {
                           />
                         </div>
                       ) : (
-                        <Button_Booking
+                        <Button_Reserve
                           initialColor="green"
                           handleColorChange={() => handleColorChange(index)}
                           isActive={buttonStates[index]}
@@ -80,6 +81,10 @@ function Dashboard() {
                 })}
               </div>
             </div>
+            <br></br>
+            <div>
+              <Reserve />
+            </div>
           </div>
         </div>
       </div>
@@ -87,4 +92,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Booking;

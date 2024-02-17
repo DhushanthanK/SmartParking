@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* overflow-y: auto; */
+    outline: none; /* Remove outline for all elements */
+}
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background: #ffff;
+    padding-bottom: 30px;
+    justify-content: center; /* Align children vertically */
+    align-items: center; /* Align children horizontally */
+    min-height: 100vh; /* Ensure container takes up at least full viewport height */
+}
+
+.card1 {
+    height: 90vw; /* Using vw for height */
+    width: 90vw; /* Using vw for width */
+    max-width: 720px; /* Limiting max-width */
+    background-color: #fff;
+    font-family: 'Rubik', sans-serif;
+    position: absolute;
+    transition: all 0.2s;
+    overflow: hidden;
+}
+
+.header1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.text1 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: xx-large;
+    
+}
+
+.underline1 {
+    width: 6vw; /* Using vw for width */
+    height: 0.6vw; /* Using vw for height */
+    background: #ffffff;
+    border-radius: 50px; /* Using vw for border-radius */
+}
+
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(#cd30ec, #a532ec, rgb(102, 1, 165));
+}
+
+.inputs1 {
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center; /* Align children horizontally */
+    
+}
+
+.input1 {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 1000px;
+    height: 80px;
+    background: #eaeaea;
+    border-radius: 6px;
+    
+}
+
+.input img {
+    margin: 0 3vw; /* Using vw for margin */
+}
+
+.inputs1 input {
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #797979;
+    font-size: 19px;
+    margin-left: 5vw;
+
+}
+
+.forgot-password {
+    padding-left: 6.2vw; /* Using vw for padding */
+    margin-top: 1vw; /* Using vw for margin */
+    color: #797979;
+    font-size: 1.8vw; /* Using vw for font-size */
+}
+
+.forgot-password span {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.User {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50px; /* Using vw for border-radius */
+    font-size: 1.9vw; /* Using vw for font-size */
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.submit-container {
+    display: flex;
+    gap: 1vw; /* Using vw for gap */
+    margin: 5vw auto 2vw auto; /* Using vw for margin */
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 16px;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height: 5vw;
+    color: #fff;
+    background: #4c00b4;
+    border-radius: 5vw;
+    font-size: 2vw;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+.background-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
+    color: #fff;
+    background: #4c00b4;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.input label {
+    color: #797979;
+    font-size: 19px;
+    width: 400px; /* Adjust label width as needed */
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.toggle-button {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 5vw;
+}
+
+.duration-btn {
+    width: 200px;
+    height: 50px;
+    background-color: #4c00b4;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 5px;
+}
+
+.option {
+    padding: 5px 10px;
+    width: 200px;
+    height: 50px;
+    background-color: #4c00b4;
+    color: #fff;
+   
+}

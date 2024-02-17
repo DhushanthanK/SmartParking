@@ -2,18 +2,28 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import slots from "../Parking_slots.json";
-import "./Dashboard.css";
+import "./Reservation.css";
+import Reserve from "./Reserve_Button";
+import Button_Booking from "./Button_Select_Slot";
 
-function Dashboard() {
-  const [] = useState(Array(slots.length).fill(false)); // Initialize button states
+function Booking() {
+  const [buttonStates, setButtonStates] = useState(
+    Array(slots.length).fill(false)
+  ); // Initialize button states
+
+  const handleColorChange = (index: number) => {
+    const newButtonStates = buttonStates.map((_, i) => i === index);
+    setButtonStates(newButtonStates);
+  };
+
   return (
     <div>
       <Navbar />
-      <div className="text-center">
+      <div className="App text-center">
         <br />
         <br />
         <h1 style={{ color: "white", fontWeight: "bold", fontSize: "3vw" }}>
-          Parking Slots
+          Select an available slot
         </h1>
         <div className="bg-transparent">
           <div className="header">
@@ -60,12 +70,19 @@ function Dashboard() {
                           />
                         </div>
                       ) : (
-                        <div className="available-box">Available</div>
+                        <Button_Booking
+                          initialColor="green"
+                          handleColorChange={() => handleColorChange(index)}
+                          isActive={buttonStates[index]}
+                        />
                       )}
                     </div>
                   );
                 })}
               </div>
+            </div>
+            <div>
+              <Reserve />
             </div>
           </div>
         </div>
@@ -74,4 +91,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Booking;

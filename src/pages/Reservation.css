@@ -1,0 +1,75 @@
+/* Dashboard.css */
+
+.Navbar{
+  position: absolute;
+}
+
+/* Custom CSS for different screen sizes */
+@media (max-width: 280px) {
+    /* Small devices (576px and below) */
+    #image-section {
+      width: 100%;
+      height: 100%;
+    }
+    #btn-custom-btn {
+      font-size: 100%; /* Gradual reduction using vw and vh units */
+      padding: 2% 5px; /* Using vw units for padding */
+      width: 90%;
+      height: 90%;
+      margin-bottom: 1vw; /* Using vw for margin */
+      align-items: center;
+    }
+  }
+  
+  @media (min-width: 280px) and (max-width: 576px) {
+    /* Small devices (576px and below) */
+    #image-section {
+      width: 100%;
+      height: 100%;
+    }
+    #btn-custom-btn {
+      font-size: 100%; /* Gradual reduction using vw and vh units */
+      padding: 3% 5px; /* Using vw units for padding */
+      width: 90%;
+      height: 90%;
+      margin-bottom: 1vw; /* Using vw for margin */
+      align-items: center;
+    }
+  }
+  
+  @media (min-width: 576px) and (max-width: 992px) {
+    #image-section {
+      width: 100%;
+      height: 100%;
+    }
+  
+    /* Medium devices (between 576px and 992px) */
+    #btn-custom-btn {
+      font-size: 100%; /* Gradual reduction using vw and vh units */
+      padding: 5px; /* Using vw units for padding */
+      width: 90%;
+      height: 90%;
+      margin-bottom: 1vw; /* Using vw for margin */
+      align-items: center;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    /* Large devices (992px and above) */
+    #image-section {
+      width: 100%;
+      height: 100%;
+    }
+  
+    /* Medium devices (between 576px and 992px) */
+    #btn-custom-btn {
+      font-size: 100%; /* Gradual reduction using vw and vh units */
+      padding: 5px; /* Using vw units for padding */
+      width: 90%;
+      height: 90%;
+      margin-bottom: 1vw; /* Using vw for margin */
+      align-items: center;
+    }
+  }
+  
+  

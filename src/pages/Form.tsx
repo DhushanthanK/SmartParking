@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import "../Form.css";
+import "./Form.css";
 import Navbar from "../components/Navbar";
-import axios from 'axios';
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Form: React.FC = () => {
   const [action, setAction] = useState("Login");
+  
 
   // Backend dev by Sajeethan Starts here
     const [name, setName] = useState<string | undefined>(undefined); 
@@ -44,37 +45,44 @@ const Form: React.FC = () => {
       .catch(err => console.log(err))
       // navigate('/dashboard')
     // Backend dev by Sajeethan ends here
-    }
+  };
   return (
     <div>
       <Navbar />
       <div className="container bg-transparent align-content-center mt-1">
-      <div className="submit-container-select col-12 ">
-        <div
-          className={action === "Login" ? "col-lg-3 col-6 btn btn-success" : "col-lg-3 col-6 btn btn-light"}
-          onClick={() => {
-            setAction("Login");
-          }}
-        >
-          <div>Log In</div>
+        <div className="submit-container-select col-12 ">
+          <div
+            className={
+              action === "Login"
+                ? "col-lg-3 col-6 btn btn-success"
+                : "col-lg-3 col-6 btn btn-light"
+            }
+            onClick={() => {
+              setAction("Login");
+            }}
+          >
+            <div>Log In</div>
+          </div>
+          <div
+            className={
+              action === "Sign Up"
+                ? "col-lg-3 col-6  btn btn-success"
+                : "col-lg-3 col-6 btn btn-light"
+            }
+            onClick={() => {
+              setAction("Sign Up");
+            }}
+          >
+            <div>Sign Up</div>
+          </div>
         </div>
-        <div
-          className={action === "Sign Up" ? "col-lg-3 col-6  btn btn-success" : "col-lg-3 col-6 btn btn-light"}
-          onClick={() => {
-            setAction("Sign Up");
-          }}
-        >
-          <div>Sign Up</div>
-        </div>
-      </div>
-      <div className="bg-transparent">
-        <div className="header">
-          <div className="text text-center">{action}</div>
-          <div className="underline col-2"></div>
-          
+        <div className="bg-transparent">
+          <div className="header">
+            <div className="text text-center">{action}</div>
+            <div className="underline col-2"></div>
 
-          {/* Sajeethan defined start node of Login Form */}
-          {action === "Login" ? null : (
+            {/* Sajeethan defined start node of Login Form */}
+            {action === "Login" ? null : (
               <div className="col-lg-6 col-10">
               <div className="form1 d-flex flex-column text-center">
                 <form onSubmit={action === "Sign Up" ? handleSubmit : HandleLogin}>
@@ -129,11 +137,9 @@ const Form: React.FC = () => {
             </div>
           )}  
           {/*  */}
-       
+       </div>
         </div>
       </div>
-      </div>
-      
     </div>
   );
 };

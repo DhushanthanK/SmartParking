@@ -1,4 +1,9 @@
-.navbar{
-    background-color: rgb(26, 26, 26);
-    font-weight: bolder;
+*{
+    transition-duration: 0.5s;
+}
+
+a{
+    color: #c11515;
+    font-size: 4.8vw; /* Using vw for font-size */
+    font-weight: 700;
 }

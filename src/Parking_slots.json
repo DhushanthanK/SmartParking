@@ -1,0 +1,20 @@
+[
+    {
+        "Slot 1": false
+    },
+    {
+        "Slot 2": true
+    },
+    {
+        "Slot 3": false
+    },   
+    {
+        "Slot 4": true
+    } ,   
+    {
+        "Slot 5": true
+    } ,   
+    {
+        "Slot 6": false
+    }
+]

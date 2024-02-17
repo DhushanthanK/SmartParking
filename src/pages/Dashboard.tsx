@@ -29,7 +29,7 @@ function Dashboard() {
                 }}
               >
                 {slots.map((parking, index) => {
-                  const [slot, isOccupied] = Object.entries(parking)[0];
+                  const [slot, isOccupied] = Object.entries(parking)[1];
                   return (
                     <div
                       key={index}
@@ -40,7 +40,8 @@ function Dashboard() {
                         borderRight: "10px solid white",
                         borderBlockEnd: "10px solid white",
                         borderStyle: "solid white",
-                        overflow: "hidden",
+                        overflow: "hidden"
+                        
 
                         // Fixed width for each grid cell
                         // Fixed height for each grid cell
@@ -60,7 +61,9 @@ function Dashboard() {
                           />
                         </div>
                       ) : (
-                        <div className="available-box">Available</div>
+                        <div className="available-box"
+                        style={{height:"150px"}}
+                        >Available</div>
                       )}
                     </div>
                   );

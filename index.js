@@ -4,6 +4,8 @@ import cors from "cors"
 import UserModel from "./models/Users.js";
 
 
+
+
 const app = express()
 app.use(json())
 app.use(cors())

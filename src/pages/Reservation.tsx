@@ -39,7 +39,7 @@ function Booking() {
                 }}
               >
                 {slots.map((parking, index) => {
-                  const [slot, isOccupied] = Object.entries(parking)[0];
+                  const [slot, isOccupied] = Object.entries(parking)[1];
                   return (
                     <div
                       key={index}
@@ -51,7 +51,7 @@ function Booking() {
                         borderBlockEnd: "10px solid white",
                         borderStyle: "solid white",
                         overflow: "hidden",
-
+                        minHeight:"200px"
                         // Fixed width for each grid cell
                         // Fixed height for each grid cell
                       }}
@@ -74,6 +74,7 @@ function Booking() {
                           initialColor="green"
                           handleColorChange={() => handleColorChange(index)}
                           isActive={buttonStates[index]}
+                          
                         />
                       )}
                     </div>

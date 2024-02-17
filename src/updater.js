@@ -39,4 +39,4 @@ updateJsonFile();
 
 // Schedule the function to run periodically (e.g., every hour)
 // You can adjust the cron schedule as needed
-setInterval(updateJsonFile, 1000); // Every hour
+setInterval(updateJsonFile, 5*1000); // Every hour
